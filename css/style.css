@@ -545,6 +545,32 @@ ul {
   line-height: 1.6;
 }
 
+.catering__dropoff-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.catering__dropoff-note span {
+  font-size: 1.5rem;
+}
+
+.catering__dropoff-note p {
+  font-size: 0.95rem;
+  color: #1e40af;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
 .catering__cta {
   text-align: center;
   margin-top: 1rem;
