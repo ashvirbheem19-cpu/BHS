@@ -484,55 +484,16 @@ ul {
 }
 
 /* ---- Catering Section ---- */
-.catering__tabs {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-bottom: 2.5rem;
-  flex-wrap: wrap;
-}
-
-.catering__tab {
-  padding: 0.7rem 1.75rem;
-  border: 2px solid #e0e0e0;
-  background: #fff;
-  border-radius: 50px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #666;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.catering__tab:hover {
-  border-color: #1a56db;
-  color: #1a56db;
-}
-
-.catering__tab.active {
-  background: linear-gradient(135deg, #1a56db, #1e40af);
-  color: #fff;
-  border-color: transparent;
-}
-
-.catering__panel {
-  display: none;
-}
-
-.catering__panel.active {
-  display: block;
-}
-
-.catering__items {
+.catering__simple {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-bottom: 2rem;
 }
 
-.catering__item {
+.catering__simple-card {
   background: #fff;
-  padding: 2rem 1.5rem;
+  padding: 2.5rem 2rem;
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
@@ -540,37 +501,27 @@ ul {
   transition: transform 0.3s ease;
 }
 
-.catering__item:hover {
+.catering__simple-card:hover {
   transform: translateY(-4px);
 }
 
-.catering__item-icon {
-  font-size: 2.5rem;
+.catering__simple-icon {
+  font-size: 3rem;
+  display: block;
   margin-bottom: 1rem;
 }
 
-.catering__item h4 {
-  font-size: 1.15rem;
+.catering__simple-card h3 {
+  font-size: 1.2rem;
   font-weight: 700;
   color: #1a1a2e;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
-.catering__item p {
+.catering__simple-card p {
   font-size: 0.95rem;
   color: #666;
   line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
-.catering__price {
-  display: inline-block;
-  font-size: 1rem;
-  font-weight: 700;
-  color: #1a56db;
-  background: #eff6ff;
-  padding: 0.25rem 1rem;
-  border-radius: 50px;
 }
 
 .catering__cta {
@@ -579,17 +530,8 @@ ul {
 }
 
 @media (max-width: 768px) {
-  .catering__items {
+  .catering__simple {
     grid-template-columns: 1fr;
-  }
-
-  .catering__tabs {
-    gap: 0.4rem;
-  }
-
-  .catering__tab {
-    padding: 0.5rem 1.25rem;
-    font-size: 0.85rem;
   }
 }
 

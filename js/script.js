@@ -1,17 +1,3 @@
-// ---- Catering Tabs ----
-const tabs = document.querySelectorAll('.catering__tab');
-const panels = document.querySelectorAll('.catering__panel');
-
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    tabs.forEach(t => t.classList.remove('active'));
-    tab.classList.add('active');
-    panels.forEach(p => p.classList.remove('active'));
-    const target = document.getElementById(`panel-${tab.dataset.tab}`);
-    if (target) target.classList.add('active');
-  });
-});
-
 // ---- Gallery Filter ----
 const filterBtns = document.querySelectorAll('.gallery__filter-btn');
 const galleryItems = document.querySelectorAll('.gallery__item');
