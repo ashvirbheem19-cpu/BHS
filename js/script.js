@@ -27,12 +27,14 @@ if (hamburger && mainNav) {
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     mainNav.classList.toggle('active');
+    document.body.classList.toggle('nav-open');
   });
 
   document.querySelectorAll('.nav__link').forEach(link => {
     link.addEventListener('click', () => {
       hamburger.classList.remove('active');
       mainNav.classList.remove('active');
+      document.body.classList.remove('nav-open');
     });
   });
 }
