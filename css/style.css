@@ -67,6 +67,58 @@ ul {
   margin-right: auto;
 }
 
+/* ---- How It Works ---- */
+.how-it-works {
+  background: #fff;
+}
+
+.how__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  position: relative;
+}
+
+.how__step {
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.how__num {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 1.25rem;
+  background: linear-gradient(135deg, #1a56db, #1e40af);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.how__step h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 0.75rem;
+}
+
+.how__step p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .how__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .btn {
   display: inline-block;
   padding: 0.85rem 2rem;
@@ -709,6 +761,63 @@ ul {
   }
 }
 
+/* ---- FAQ Section ---- */
+.faq {
+  background: #fff;
+}
+
+.faq__list {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.faq__item {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.faq__item:hover {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.faq__question {
+  padding: 1.15rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.faq__question::-webkit-details-marker {
+  display: none;
+}
+
+.faq__question::after {
+  content: '+';
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #1a56db;
+  transition: transform 0.3s ease;
+}
+
+.faq__item[open] .faq__question::after {
+  transform: rotate(45deg);
+}
+
+.faq__answer {
+  padding: 0 1.5rem 1.15rem;
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.7;
+}
+
 /* ---- Gallery Section ---- */
 .gallery {
   background: #f8f9fa;
@@ -1100,4 +1209,60 @@ ul {
   .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
   }
+}
+
+/* ---- Back to Top ---- */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44px;
+  height: 44px;
+  background: #1a56db;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 15px rgba(26, 86, 219, 0.3);
+  z-index: 999;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(26, 86, 219, 0.4);
+}
+
+/* ---- Pricing Hint ---- */
+.hiring__price {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1a56db;
+  margin-top: 0.2rem;
+}
+
+/* ---- Service Area Badge ---- */
+.contact__service-area {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  border-radius: 10px;
+  padding: 0.9rem 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #1a56db;
+  line-height: 1.4;
 }
