@@ -259,15 +259,16 @@ ul {
 
 .header__phone {
   display: none;
-  font-size: 0.85rem;
-  font-weight: 600;
+  width: 36px;
+  height: 36px;
   color: #1a56db;
-  white-space: nowrap;
-  margin-left: auto;
-  margin-right: 1rem;
-  padding: 0.4rem 0.8rem;
   border: 1.5px solid #1a56db;
-  border-radius: 6px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -276,9 +277,13 @@ ul {
   color: #fff;
 }
 
+.header__phone svg {
+  display: block;
+}
+
 @media (min-width: 769px) {
   .header__phone {
-    display: inline-block;
+    display: flex;
   }
 }
 
