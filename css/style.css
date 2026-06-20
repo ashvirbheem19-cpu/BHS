@@ -318,6 +318,22 @@ ul {
   color: #1a56db;
 }
 
+.hero__wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  line-height: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero__wave svg {
+  width: 100%;
+  height: 100%;
+}
+
 .hero__card--2 {
   margin-left: 2rem;
 }
@@ -422,6 +438,71 @@ ul {
   }
 }
 
+/* ---- Why Choose Section ---- */
+.why-choose {
+  background: linear-gradient(135deg, #1a56db 0%, #1e40af 100%);
+  color: #fff;
+}
+
+.why-choose .section-title {
+  color: #fff;
+}
+
+.why-choose .section-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.why-choose__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.why-choose__card {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.why-choose__card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.why-choose__icon-wrap {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.25rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-choose__card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #fff;
+}
+
+.why-choose__card p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .why-choose__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---- Hiring Section ---- */
 .hiring {
   background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
@@ -448,7 +529,14 @@ ul {
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 4px solid transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.hiring__card:hover {
+  border-top-color: #1a56db;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
 }
 
 .hiring__card:hover {
@@ -497,6 +585,10 @@ ul {
 }
 
 /* ---- Catering Section ---- */
+.catering {
+  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+}
+
 .catering__simple {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -511,11 +603,14 @@ ul {
   text-align: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   border: 1px solid #f0f0f0;
-  transition: transform 0.3s ease;
+  border-top: 4px solid transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .catering__simple-card:hover {
-  transform: translateY(-4px);
+  border-top-color: #1a56db;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
 }
 
 .catering__simple-card h3 {
@@ -714,6 +809,10 @@ ul {
 }
 
 /* ---- Contact Section ---- */
+.contact {
+  background: #f8f9fa;
+}
+
 .contact__inner {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -731,6 +830,34 @@ ul {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
+  background: #fff;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.contact__info-icon {
+  width: 44px;
+  height: 44px;
+  background: #eff6ff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact__response {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  border-radius: 10px;
+  padding: 0.9rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1a56db;
 }
 
 .contact__info-item strong {
