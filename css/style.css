@@ -129,10 +129,6 @@ ul {
   color: #1a1a2e;
 }
 
-.logo__icon {
-  font-size: 1.75rem;
-}
-
 .logo__text {
   background: linear-gradient(135deg, #1a56db, #1e40af);
   -webkit-background-clip: text;
@@ -301,14 +297,9 @@ ul {
 }
 
 .hero__card-icon {
-  font-size: 1.75rem;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #eff6ff, #dbeafe);
-  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a56db;
 }
 
 .hero__card--2 {
@@ -459,11 +450,6 @@ ul {
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
 }
 
-.hiring__icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
 .hiring__title {
   font-size: 1.2rem;
   font-weight: 700;
@@ -524,12 +510,6 @@ ul {
 
 .catering__simple-card:hover {
   transform: translateY(-4px);
-}
-
-.catering__simple-icon {
-  font-size: 3rem;
-  display: block;
-  margin-bottom: 1rem;
 }
 
 .catering__simple-card h3 {
@@ -645,11 +625,6 @@ ul {
   transform: scale(1.03);
 }
 
-.gallery__emoji {
-  font-size: 3.5rem;
-  z-index: 1;
-}
-
 .gallery__overlay {
   position: absolute;
   inset: 0;
@@ -711,13 +686,6 @@ ul {
   padding: 2rem;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.testimonials__stars {
-  color: #ffd700;
-  font-size: 1.1rem;
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
 }
 
 .testimonials__text {
@@ -782,18 +750,6 @@ ul {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-}
-
-.contact__info-item span:first-child {
-  font-size: 1.5rem;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #eff6ff;
-  border-radius: 10px;
-  flex-shrink: 0;
 }
 
 .contact__info-item strong {
@@ -867,19 +823,6 @@ ul {
   border: 1px solid #f0f0f0;
   max-width: 500px;
   margin: 0 auto;
-}
-
-.contact__success-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #4caf50, #2e7d32);
-  color: #fff;
-  font-size: 1.75rem;
-  margin-bottom: 1.5rem;
 }
 
 .contact__success h3 {
