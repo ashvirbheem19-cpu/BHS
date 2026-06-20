@@ -17,51 +17,11 @@ filterBtns.forEach(btn => {
   });
 });
 
-// ---- Multi-Step Contact Form ----
+// ---- Contact Form ----
 const form = document.getElementById('contactForm');
-const formSteps = document.querySelectorAll('.form-step');
-const nextBtns = document.querySelectorAll('.form__next');
-const prevBtns = document.querySelectorAll('.form__prev');
 const formContainer = document.querySelector('.contact__form');
 const successDiv = document.getElementById('formSuccess');
 const resetBtn = document.getElementById('resetForm');
-const serviceCheckboxes = document.querySelectorAll('.service-checkbox');
-const equipmentFields = document.getElementById('equipmentFields');
-const cateringFields = document.getElementById('cateringFields');
-
-let currentStep = 1;
-
-function showStep(step) {
-  formSteps.forEach(s => s.classList.remove('active'));
-  const target = document.querySelector(`.form-step[data-step="${step}"]`);
-  if (target) target.classList.add('active');
-  currentStep = step;
-}
-
-function updateFields() {
-  const eqChecked = document.querySelector('.service-checkbox[value="equipment"]').checked;
-  const catChecked = document.querySelector('.service-checkbox[value="catering"]').checked;
-  if (equipmentFields) equipmentFields.style.display = eqChecked ? 'block' : 'none';
-  if (cateringFields) cateringFields.style.display = catChecked ? 'block' : 'none';
-}
-
-serviceCheckboxes.forEach(cb => {
-  cb.addEventListener('change', updateFields);
-});
-
-nextBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const next = parseInt(btn.dataset.next);
-    showStep(next);
-  });
-});
-
-prevBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const prev = parseInt(btn.dataset.prev);
-    showStep(prev);
-  });
-});
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -74,9 +34,6 @@ if (resetBtn) {
     form.reset();
     if (formContainer) formContainer.style.display = 'block';
     if (successDiv) successDiv.style.display = 'none';
-    if (equipmentFields) equipmentFields.style.display = 'none';
-    if (cateringFields) cateringFields.style.display = 'none';
-    showStep(1);
   });
 }
 
