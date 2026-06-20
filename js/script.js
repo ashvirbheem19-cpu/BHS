@@ -17,15 +17,7 @@ filterBtns.forEach(btn => {
   });
 });
 
-// ---- Contact Form Success State ----
-const formContainer = document.querySelector('.contact__form');
-const successDiv = document.getElementById('formSuccess');
-
-if (window.location.hash === '#success') {
-  if (formContainer) formContainer.style.display = 'none';
-  if (successDiv) successDiv.style.display = 'block';
-  window.location.hash = '';
-}
+// (contact form handled by FormSubmit redirect)
 
 // ---- Mobile Menu Toggle ----
 const hamburger = document.getElementById('hamburger');
