@@ -952,6 +952,15 @@ ul {
   margin-top: 1rem;
 }
 
+.form__section-label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 1.5rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #eff6ff;
+}
+
 .form__details {
   margin-bottom: 1rem;
 }

@@ -25,9 +25,9 @@ const prevBtns = document.querySelectorAll('.form__prev');
 const formContainer = document.querySelector('.contact__form');
 const successDiv = document.getElementById('formSuccess');
 const resetBtn = document.getElementById('resetForm');
-const serviceRadios = document.querySelectorAll('input[name="service"]');
-const cateringDetails = document.getElementById('cateringDetails');
-const hiringDetails = document.getElementById('hiringDetails');
+const serviceCheckboxes = document.querySelectorAll('.service-checkbox');
+const equipmentFields = document.getElementById('equipmentFields');
+const cateringFields = document.getElementById('cateringFields');
 
 let currentStep = 1;
 
@@ -37,6 +37,17 @@ function showStep(step) {
   if (target) target.classList.add('active');
   currentStep = step;
 }
+
+function updateFields() {
+  const eqChecked = document.querySelector('.service-checkbox[value="equipment"]').checked;
+  const catChecked = document.querySelector('.service-checkbox[value="catering"]').checked;
+  if (equipmentFields) equipmentFields.style.display = eqChecked ? 'block' : 'none';
+  if (cateringFields) cateringFields.style.display = catChecked ? 'block' : 'none';
+}
+
+serviceCheckboxes.forEach(cb => {
+  cb.addEventListener('change', updateFields);
+});
 
 nextBtns.forEach(btn => {
   btn.addEventListener('click', () => {
@@ -52,18 +63,6 @@ prevBtns.forEach(btn => {
   });
 });
 
-serviceRadios.forEach(radio => {
-  radio.addEventListener('change', () => {
-    if (radio.value === 'catering') {
-      cateringDetails.style.display = 'block';
-      hiringDetails.style.display = 'none';
-    } else {
-      cateringDetails.style.display = 'none';
-      hiringDetails.style.display = 'block';
-    }
-  });
-});
-
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   if (formContainer) formContainer.style.display = 'none';
@@ -75,8 +74,8 @@ if (resetBtn) {
     form.reset();
     if (formContainer) formContainer.style.display = 'block';
     if (successDiv) successDiv.style.display = 'none';
-    cateringDetails.style.display = 'none';
-    hiringDetails.style.display = 'none';
+    if (equipmentFields) equipmentFields.style.display = 'none';
+    if (cateringFields) cateringFields.style.display = 'none';
     showStep(1);
   });
 }

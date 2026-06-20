@@ -326,27 +326,27 @@
             </div>
           </div>
           <form class="contact__form" id="contactForm" novalidate>
-            <!-- Step 1: Service Type -->
+            <!-- Step 1: What you need -->
             <div class="form-step active" data-step="1">
               <div class="form-step__header">
                 <span class="form-step__num">Step 1</span>
-                <span class="form-step__title">What service are you interested in?</span>
+                <span class="form-step__title">What do you need? (tick all that apply)</span>
               </div>
               <div class="form__options">
                 <label class="form__option">
-                  <input type="radio" name="service" value="catering" required>
+                  <input type="checkbox" name="service" value="equipment" class="service-checkbox">
                   <div class="form__option-box">
-                    <span class="form__option-icon">&#127858;</span>
-                    <span class="form__option-label">Catering</span>
-                    <span class="form__option-desc">Menus, pricing, and event catering</span>
+                    <span class="form__option-icon">&#127968;</span>
+                    <span class="form__option-label">Equipment Hire</span>
+                    <span class="form__option-desc">Marquees, chairs, tables, cutlery & more</span>
                   </div>
                 </label>
                 <label class="form__option">
-                  <input type="radio" name="service" value="hiring" required>
+                  <input type="checkbox" name="service" value="catering" class="service-checkbox">
                   <div class="form__option-box">
-                    <span class="form__option-icon">&#128188;</span>
-                    <span class="form__option-label">Hiring / Staffing</span>
-                    <span class="form__option-desc">Chairs, tables, cutlery and more</span>
+                    <span class="form__option-icon">&#127858;</span>
+                    <span class="form__option-label">Catering</span>
+                    <span class="form__option-desc">Fresh, ready-to-serve meals delivered to you</span>
                   </div>
                 </label>
               </div>
@@ -359,7 +359,7 @@
                 <span class="form-step__num">Step 2</span>
                 <span class="form-step__title">Tell us more</span>
               </div>
-              <div class="form__details" id="cateringDetails" style="display:none;">
+              <div class="form__row">
                 <label class="form__group">
                   <span>Event Type</span>
                   <select name="eventType" class="form__input">
@@ -367,41 +367,56 @@
                     <option value="wedding">Wedding</option>
                     <option value="corporate">Corporate</option>
                     <option value="social">Social Event</option>
-                    <option value="dropoff">Drop-Off</option>
                     <option value="other">Other</option>
                   </select>
-                </label>
-                <label class="form__group">
-                  <span>Number of Guests</span>
-                  <input type="number" name="guestCount" class="form__input" placeholder="Approx. guest count" min="1">
                 </label>
                 <label class="form__group">
                   <span>Event Date</span>
                   <input type="date" name="eventDate" class="form__input">
                 </label>
               </div>
-              <div class="form__details" id="hiringDetails" style="display:none;">
-                <label class="form__group">
-                  <span>Equipment Needed</span>
-                  <select name="equipment" class="form__input">
-                    <option value="">Select equipment</option>
-                    <option value="marquee">Marquee / Tent</option>
-                    <option value="chairs">Chairs</option>
-                    <option value="tables">Tables</option>
-                    <option value="cutlery">Cutlery & Glassware</option>
-                    <option value="fullset">Full Set (Tables, Chairs, Cutlery)</option>
-                    <option value="accessories">Event Accessories</option>
-                    <option value="other">Other</option>
-                  </select>
-                </label>
-                <label class="form__group">
-                  <span>Quantity Needed</span>
-                  <input type="number" name="quantity" class="form__input" placeholder="How many?" min="1">
-                </label>
-                <label class="form__group">
-                  <span>Event Date</span>
-                  <input type="date" name="hireDate" class="form__input">
-                </label>
+              <div id="equipmentFields" style="display:none;">
+                <h4 class="form__section-label">&#127968; Equipment Hire</h4>
+                <div class="form__row">
+                  <label class="form__group">
+                    <span>Equipment Needed</span>
+                    <select name="equipment" class="form__input">
+                      <option value="">Select equipment</option>
+                      <option value="marquee">Marquee / Tent</option>
+                      <option value="chairs">Chairs</option>
+                      <option value="tables">Tables</option>
+                      <option value="cutlery">Cutlery & Glassware</option>
+                      <option value="fullset">Full Set (Tables, Chairs, Cutlery)</option>
+                      <option value="accessories">Event Accessories</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </label>
+                  <label class="form__group">
+                    <span>Quantity</span>
+                    <input type="number" name="quantity" class="form__input" placeholder="How many?" min="1">
+                  </label>
+                </div>
+              </div>
+              <div id="cateringFields" style="display:none;">
+                <h4 class="form__section-label">&#127858; Catering</h4>
+                <div class="form__row">
+                  <label class="form__group">
+                    <span>Number of Guests</span>
+                    <input type="number" name="guestCount" class="form__input" placeholder="Approx. guest count" min="1">
+                  </label>
+                  <label class="form__group">
+                    <span>Meal Preference</span>
+                    <select name="mealPref" class="form__input">
+                      <option value="">Select preference</option>
+                      <option value="breakfast">Breakfast</option>
+                      <option value="lunch">Lunch</option>
+                      <option value="dinner">Dinner</option>
+                      <option value="braai">Braai / BBQ</option>
+                      <option value="dessert">Desserts Only</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </label>
+                </div>
               </div>
               <div class="form__actions">
                 <button type="button" class="btn btn-secondary form__prev" data-prev="1">Back</button>
@@ -428,7 +443,7 @@
               <div class="form__row">
                 <label class="form__group">
                   <span>Phone *</span>
-                  <input type="tel" name="phone" class="form__input" required placeholder="(555) 123-4567">
+                  <input type="tel" name="phone" class="form__input" required placeholder="+27 84 462 8362">
                 </label>
                 <label class="form__group">
                   <span>Company / Event Name</span>
