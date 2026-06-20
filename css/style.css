@@ -127,12 +127,20 @@ ul {
 }
 
 .logo--text {
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   color: #1a56db;
   text-transform: uppercase;
   line-height: 1.2;
+  max-width: 280px;
+}
+
+@media (min-width: 768px) {
+  .logo--text {
+    font-size: 1rem;
+    max-width: none;
+  }
 }
 
 .logo {
@@ -400,8 +408,8 @@ ul {
 }
 
 .about__logo {
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 90%;
+  max-height: 90%;
   object-fit: contain;
 }
 
