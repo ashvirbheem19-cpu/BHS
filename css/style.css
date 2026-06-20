@@ -120,6 +120,12 @@ ul {
   height: 70px;
 }
 
+.logo__img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -127,13 +133,6 @@ ul {
   font-size: 1.5rem;
   font-weight: 800;
   color: #1a1a2e;
-}
-
-.logo__text {
-  background: linear-gradient(135deg, #1a56db, #1e40af);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .nav__list {
@@ -864,11 +863,6 @@ ul {
 
 .footer__brand .logo {
   margin-bottom: 1rem;
-}
-
-.footer__brand .logo__text {
-  -webkit-text-fill-color: #fff;
-  color: #fff;
 }
 
 .footer__brand p {

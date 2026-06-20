@@ -17,24 +17,14 @@ filterBtns.forEach(btn => {
   });
 });
 
-// ---- Contact Form ----
-const form = document.getElementById('contactForm');
+// ---- Contact Form Success State ----
 const formContainer = document.querySelector('.contact__form');
 const successDiv = document.getElementById('formSuccess');
-const resetBtn = document.getElementById('resetForm');
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
+if (window.location.hash === '#success') {
   if (formContainer) formContainer.style.display = 'none';
   if (successDiv) successDiv.style.display = 'block';
-});
-
-if (resetBtn) {
-  resetBtn.addEventListener('click', () => {
-    form.reset();
-    if (formContainer) formContainer.style.display = 'block';
-    if (successDiv) successDiv.style.display = 'none';
-  });
+  window.location.hash = '';
 }
 
 // ---- Mobile Menu Toggle ----
